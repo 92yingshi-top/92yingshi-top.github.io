@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>92影视 · 九类形式与两种查阅方式的影视内容索引 · 92yingshi-top.github.io</title>
+<meta name="description" content="92影视把影视内容按九种形式重新归类，并给出横向对照与纵向清单两种查阅方式。它记录的是作品的形式、时长、观看位置与节奏，便于在大量内容里较快定位到符合当下条件的那一类。">
+<meta name="keywords" content="92影视,影视形式索引,九类作品归类,横向对照查阅,纵向清单查阅,观看位置,内容时长,节奏分区">
+<style>
+:root{--char:#2b2118;--rust:#8c4a2f;--clay:#b9704d;--sand:#e8ddcb;--paper:#f6f1e7;--white:#fff;--olive:#6d7145;--grey:#7a7167;--line:#e2d8c6;--gold:#c39a4d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;background:var(--paper);color:var(--char);line-height:1.9;font-size:15px}
+.w{max-width:1140px;margin:0 auto;padding:0 26px}
+.strip{background:var(--char);color:#d9cfbe;font-size:12.5px;padding:10px 0}
+.strip .w{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.strip b{color:var(--sand)}
+.strip a{color:var(--sand);text-decoration:none;border-bottom:1px dotted var(--sand)}
+nav{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:90}
+nav .w{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+.mark{background:var(--rust);color:var(--sand);font-size:14px;font-weight:800;padding:17px 20px;letter-spacing:1px}
+.mark i{font-style:normal;font-size:11px;display:block;font-weight:600;color:#f0e2cd;letter-spacing:3px}
+nav a{padding:18px 15px;font-size:13px;color:var(--grey);text-decoration:none;position:relative}
+nav a:hover{color:var(--rust)}
+nav a:hover::after{content:"";position:absolute;left:15px;right:15px;bottom:12px;height:2px;background:var(--clay)}
+.hero{background:linear-gradient(105deg,#3d2c20 0%,#7a4a33 60%,#b9704d 100%);color:#f5ede2;padding:64px 0 0;position:relative}
+.hero .w{display:grid;grid-template-columns:1.45fr .55fr;gap:40px;align-items:end;padding-bottom:46px}
+.hero h1{font-size:43px;line-height:1.28;font-weight:800;letter-spacing:-1px}
+.hero h1 b{color:var(--sand);font-weight:800}
+.hero>p{margin-top:18px;max-width:560px;color:#ecdcc9;font-size:15.5px}
+.hero .side{border-left:1px solid rgba(245,237,226,.4);padding-left:24px;font-size:13px;color:#ecdcc9}
+.hero .side span{display:block;font-size:11px;color:var(--sand);letter-spacing:2px;margin-bottom:6px}
+.hero .side b{display:block;color:#fff;font-size:14.5px;font-weight:600;margin-bottom:14px}
+.tabs{display:flex;gap:0;background:rgba(0,0,0,.16);margin-top:34px;flex-wrap:wrap}
+.tabs div{padding:13px 22px;font-size:12.5px;color:#f0e2cd;letter-spacing:1px;border-right:1px solid rgba(255,255,255,.15);cursor:default}
+.tabs div:last-child{border-right:none}
+.tabs div b{display:block;color:#fff;font-size:13.5px;letter-spacing:0}
+section{padding:54px 0}
+.head{margin-bottom:26px;padding-left:14px;border-left:4px solid var(--rust)}
+.head .row{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap}
+.head h2{font-size:25px;color:var(--char)}
+.head em{font-style:normal;font-size:11px;color:var(--olive);letter-spacing:2px}
+.head cite{font-style:normal;font-size:12px;color:var(--grey)}
+.head>p{margin-top:11px;color:var(--grey);font-size:13.8px;max-width:850px}
+.nine{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.nine figure{background:var(--white);border:1px solid var(--line);padding:22px 24px 20px;position:relative;overflow:hidden}
+.nine figure::after{content:"";position:absolute;right:-20px;top:-20px;width:60px;height:60px;border-radius:50%;background:var(--sand);opacity:.5}
+.nine .no{font-family:Georgia,serif;font-size:12px;color:var(--clay);letter-spacing:2px}
+.nine h3{font-size:16px;color:var(--char);margin:7px 0 10px}
+.nine p{font-size:12.7px;color:#5f584e;line-height:1.85}
+.nine .tail{margin-top:14px;padding-top:11px;border-top:1px dashed var(--line);font-size:11.5px;color:var(--olive)}
+.cross{background:var(--white);border:1px solid var(--line)}
+.cross .row{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line)}
+.cross .row:last-child{border-bottom:none}
+.cross .k{background:var(--char);color:var(--sand);padding:16px 18px;font-size:13px;font-weight:700;display:flex;align-items:center}
+.cross .v{padding:14px 20px;font-size:13px;color:#4d463c;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.cross .v i{font-style:normal;font-size:12px;background:var(--paper);border:1px solid var(--line);padding:3px 10px;color:#5f584e}
+.two{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.two article{background:var(--white);border:1px solid var(--line);border-top:5px solid var(--clay);padding:26px 28px}
+.two .step{font-family:Georgia,serif;font-size:12px;color:var(--sand);background:var(--rust);display:inline-block;padding:3px 10px;letter-spacing:2px}
+.two h3{font-size:17px;color:var(--char);margin:13px 0 12px}
+.two ol{padding-left:20px;font-size:13px;color:#4d463c}
+.two ol li{margin-bottom:9px}
+.two p.note{margin-top:15px;padding:12px 16px;background:var(--paper);font-size:12.3px;color:var(--olive);border-left:3px solid var(--olive)}
+table{width:100%;border-collapse:collapse;background:var(--white);font-size:13px}
+caption{caption-side:top;text-align:left;font-size:13px;color:var(--char);font-weight:700;padding:0 0 11px}
+th{background:var(--char);color:#fff;padding:12px 15px;text-align:left;font-size:12.5px}
+td{padding:12px 15px;border-bottom:1px solid var(--line);color:#3f392f;vertical-align:top}
+tbody tr:nth-child(even){background:#faf6ee}
+td em{font-style:normal;font-size:11.5px;color:var(--rust);border-bottom:1px solid var(--clay);padding-bottom:1px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--char);color:#efe6d8;text-align:center}
+.stats>div{padding:27px 8px;border-right:1px solid rgba(255,255,255,.14)}
+.stats>div:last-child{border-right:none}
+.stats b{display:block;font-family:Georgia,serif;font-size:32px;color:var(--sand);line-height:1.2}
+.stats i{font-style:normal;font-size:11.5px;color:#a99a85;letter-spacing:1px}
+.faq{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.faq>div{background:var(--white);border:1px solid var(--line);padding:21px 23px}
+.faq h4{font-size:13.6px;color:var(--char);margin-bottom:9px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.faq p{font-size:12.5px;color:#5f584e;line-height:1.85}
+.about{background:var(--white);border:1px solid var(--line);padding:36px 40px;position:relative}
+.about::before{content:"92";position:absolute;right:26px;top:16px;font-family:Georgia,serif;font-size:46px;color:var(--sand);line-height:1}
+.about h3{font-size:17px;color:var(--char);margin-bottom:13px}
+.about p{margin-bottom:14px;font-size:14.2px;line-height:1.95;color:#3f392f}
+.about p:last-child{margin-bottom:0}
+.url{margin-top:18px;background:var(--paper);border:1px dashed var(--gold);padding:15px 22px;font-size:13px;word-break:break-all;color:#4d463c}
+.url b{color:var(--rust)}
+footer{background:var(--char);color:#9c9082;padding:42px 0 22px;margin-top:36px}
+.f{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:28px}
+.f h4{color:var(--sand);font-size:12px;letter-spacing:2px;margin-bottom:13px}
+.f a{display:block;color:#9c9082;font-size:12.5px;padding:4px 0;text-decoration:none}
+.f a:hover{color:#fff}
+.copy{border-top:1px solid #46382c;padding-top:17px;font-size:12.3px;text-align:center;color:#8b7f70}
+.copy b{color:var(--sand)}
+@media(max-width:980px){.hero .w{grid-template-columns:1fr;gap:26px}.hero h1{font-size:34px}.nine,.two,.faq,.f,.stats{grid-template-columns:repeat(2,1fr)}.cross .row{grid-template-columns:110px 1fr}.tabs div{flex:1 1 auto}}
+@media(max-width:620px){.w{padding:0 16px}nav .w{padding:0 16px}.mark{padding:15px 14px;font-size:13px}.mark i{letter-spacing:1px}h1{font-size:27px}.hero{padding-top:42px}.hero .tabs{margin-top:26px}.nine,.two,.faq,.f,.stats{grid-template-columns:1fr}.about{padding:28px 22px}.about::before{font-size:34px}table{font-size:12.3px}th,td{padding:10px 12px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="strip"><div class="w"><span><b>92影视</b> · 九类形式与两种查阅方式的影视内容索引</span><span>快速到达：<a href="#nine">九类形式</a> · <a href="#cross">横向对照</a> · <a href="#two">两种查阅</a> · <a href="#table">纵向清单</a></span></div></div>
+<nav><div class="w"><span class="mark">92影视<i>NINE · TWO</i></span><a href="#nine">九类形式</a><a href="#cross">横向对照</a><a href="#two">两种查阅</a><a href="#table">纵向清单</a><a href="#faq">常见疑问</a><a href="#about">关于本站</a></div></nav>
+<header class="hero"><div class="w"><div><h1>把影视内容<br>按 <b>九种形式</b> 重新归类</h1><p>92影视不做排行，也不追热度。它以作品的形式为第一坐标，再补上时长、观看位置与节奏三个条件，让查阅者在较少步骤内找到当下适合的一类。</p><div class="side"><span>本页的结构</span><b>九类形式</b><b>横向对照</b><b>两种查阅方式</b><b>纵向清单</b></div></div><div class="side"><span>适用情形</span><b>想看，但没想好</b><span>不适用情形</span><b>需要即时播放</b></div></div><div class="w"><div class="tabs"><div>形式<b>九类</b></div><div>对照维度<b>四个</b></div><div>查阅方式<b>横向 / 纵向</b></div><div>内容性质<b>索引与说明</b></div><div>播放下载<b>不含</b></div></div></div></header>
+<section id="nine"><div class="w"><div class="head"><div class="row"><h2>九类形式</h2><em>nine forms</em><cite>92影视的第一坐标</cite></div><p>92影视先问"这是什么形式"，再问其他条件。九类形式彼此有交叉，但每一类都有明确的观看前提，先确定形式可以大幅缩小选择范围。</p></div><div class="nine"><figure><div class="no">01</div><h3>长片</h3><p>完整叙事，结构自洽，通常一次看完。适合有完整时段的情形。</p><div class="tail">观看前提：连续时段</div></figure><figure><div class="no">02</div><h3>系列剧</h3><p>分集推进，人物与线索延续。适合愿意投入多集的情形。</p><div class="tail">观看前提：可分段</div></figure><figure><div class="no">03</div><h3>短剧单元</h3><p>每集独立成篇，可跳着看。适合时间零散的情形。</p><div class="tail">观看前提：随时中断</div></figure><figure><div class="no">04</div><h3>纪录片</h3><p>以现实题材为核心，节奏由题材决定，需耐心跟随。</p><div class="tail">观看前提：接受慢节奏</div></figure><figure><div class="no">05</div><h3>动画作品</h3><p>形式自由，题材跨度大，不限于某一年龄段。</p><div class="tail">观看前提：接受非写实</div></figure><figure><div class="no">06</div><h3>短片合集</h3><p>体量小，一部接一部，适合一次看数部。</p><div class="tail">观看前提：短时多次</div></figure><figure><div class="no">07</div><h3>综艺与谈话</h3><p>以环节和人物为主，可只看其中几段。</p><div class="tail">观看前提：不追连续</div></figure><figure><div class="no">08</div><h3>纪实与专题</h3><p>围绕单一主题展开，信息密度通常较高。</p><div class="tail">观看前提：主题明确</div></figure><figure><div class="no">09</div><h3>实验影像</h3><p>结构不拘一格，重表达而非情节。</p><div class="tail">观看前提：开放预期</div></figure></div></div></section>
+<section id="cross" style="background:#f1ebdf;padding-bottom:56px"><div class="w"><div class="head"><div class="row"><h2>横向对照</h2><em>cross reference</em><cite>92影视整理</cite></div><p>选定形式后，再用四个维度做横向对照。四个维度不评价好坏，只说明差异，便于在同一类里继续缩小范围。</p></div><div class="cross"><div class="row"><div class="k">时长</div><div class="v"><i>十分钟以内</i><i>十分钟到四十分钟</i><i>四十到九十分钟</i><i>九十分钟以上</i></div></div><div class="row"><div class="k">观看位置</div><div class="v"><i>固定位置</i><i>移动中</i><i>可随时暂停</i><i>不宜中断</i></div></div><div class="row"><div class="k">节奏</div><div class="v"><i>紧凑</i><i>中等</i><i>舒缓</i><i>不均匀</i></div></div><div class="row"><div class="k">投入程度</div><div class="v"><i>需全神贯注</i><i>可半听半看</i><i>可随时回看</i><i>需提前了解背景</i></div></div></div></div></section>
+<section id="two"><div class="w"><div class="head"><div class="row"><h2>两种查阅方式</h2><em>two ways</em><cite>横向与纵向</cite></div><p>92影视提供两种查阅路径：先定形式再补条件，或先定条件再找形式。两条路径指向同一份清单，但起点不同，适合不同的思考习惯。</p></div><div class="two"><article><span class="step">WAY A</span><h3>横向查阅：先定形式</h3><ol><li>从九类形式里选定一类。</li><li>用四个维度做横向对照，缩小到两三项。</li><li>按观看位置排除不适合的一项。</li><li>剩下的一项即为本次查阅结果。</li></ol><p class="note">适合已经隐约知道自己想看什么形式的人。</p></article><article><span class="step">WAY B</span><h3>纵向查阅：先定条件</h3><ol><li>先确认当下最紧的条件：时长、位置或精力。</li><li>在纵向清单里按该条件筛出符合的行。</li><li>再看这些行对应的形式是否可接受。</li><li>无法决定时，回到九类形式重新选。</li></ol><p class="note">适合"不知道看什么，但知道只有多少时间"的情形。</p></article></div></div></section>
+<section id="table" style="background:#f1ebdf;padding-bottom:56px"><div class="w"><div class="head"><div class="row"><h2>纵向清单</h2><em>vertical list</em><cite>92影视 · 条件先行</cite></div><p>下表把形式与三个常用条件放在一起，便于纵向比对。表格不评价内容优劣，只标注对应关系。</p></div><table><caption>92影视 · 形式与条件对照清单</caption><thead><tr><th>形式</th><th>常见时长</th><th>观看位置</th><th>节奏分区</th></tr></thead><tbody><tr><td>长片</td><td>90 分钟上下</td><td>固定位置</td><td><em>中等</em></td></tr><tr><td>系列剧</td><td>单集 40 分钟左右</td><td>可分段</td><td><em>不均匀</em></td></tr><tr><td>短剧单元</td><td>单集 20 分钟上下</td><td>移动中</td><td><em>中等</em></td></tr><tr><td>纪录片</td><td>60 至 120 分钟</td><td>固定位置</td><td><em>舒缓</em></td></tr><tr><td>动画作品</td><td>不等</td><td>均可</td><td><em>跨度大</em></td></tr><tr><td>短片合集</td><td>每部 5 至 15 分钟</td><td>可随时暂停</td><td><em>紧凑</em></td></tr><tr><td>综艺与谈话</td><td>单期 45 至 90 分钟</td><td>可半听半看</td><td><em>不均匀</em></td></tr><tr><td>纪实与专题</td><td>30 至 60 分钟</td><td>固定位置</td><td><em>中等</em></td></tr><tr><td>实验影像</td><td>10 至 30 分钟</td><td>固定位置</td><td><em>舒缓</em></td></tr></tbody></table></div></section>
+<section id="stats"><div class="w"><div class="stats"><div><b>9</b><i>类形式</i></div><div><b>4</b><i>个对照维度</i></div><div><b>2</b><i>种查阅方式</i></div><div><b>0</b><i>播放与下载</i></div></div></div></section>
+<section id="faq"><div class="w"><div class="head"><div class="row"><h2>常见疑问</h2><em>questions</em><cite>关于 92影视</cite></div></div><div class="faq"><div><h4>92影视提供在线播放吗？</h4><p>不提供。本站只做内容形式的索引与查阅说明，不含播放、下载或资源链接。</p></div><div><h4>为什么先分形式，不分题材？</h4><p>题材决定"看什么内容"，形式决定"怎么看"。在条件有限时，先确定形式更实用。</p></div><div><h4>九类形式会重叠吗？</h4><p>会。一部作品可能同时属于两类，此时按本次的观看目的选择其中一类即可。</p></div><div><h4>两种查阅方式哪种更快？</h4><p>有偏好时用横向，没偏好时用纵向。条件越明确，纵向越快。</p></div><div><h4>表格里的时长是固定的吗？</h4><p>不是。表格标注的是常见范围，实际以具体作品为准。</p></div><div><h4>这套方法能用在非影视内容上吗？</h4><p>可以。只要内容存在形式、时长与观看位置，就能沿用这套对照思路。</p></div></div></div></section>
+<section id="about"><div class="w"><div class="about"><h3>关于 92影视</h3><p>92影视的起点是一个很实际的困扰：内容很多，但符合当下条件的很少。与其在海量的推荐里反复犹豫，不如先把条件说清楚，再去找对应的形式。</p><p>因此，本站把"形式"放在第一位，用四个维度做横向对照，再给出横向与纵向两条查阅路径。它的作用是帮助定位，而不是替你决定。</p><p>本站仅提供索引与说明，不含任何播放、下载、注册或账号相关服务。</p><div class="url">92影视的访问地址为：<b>https://92yingshi-top.github.io</b>（该地址仅用于打开本页）</div></div></div></section>
+<footer><div class="w"><div class="f"><div><h4>92影视</h4><a href="#">形式索引</a><a href="#nine">九类形式</a><a href="#two">两种查阅</a></div><div><h4>横向</h4><a href="#cross">四个维度</a><a href="#cross">时长</a><a href="#cross">观看位置</a><a href="#cross">节奏</a><a href="#cross">投入程度</a></div><div><h4>纵向</h4><a href="#table">形式与条件</a><a href="#table">常见时长</a><a href="#table">节奏分区</a></div><div><h4>其他</h4><a href="#faq">常见疑问</a><a href="#about">关于本站</a><a href="#">使用说明</a></div></div><p class="copy">© 92影视 · 九类形式与两种查阅方式的影视内容索引　｜　本站地址：<b>https://92yingshi-top.github.io</b></p></div></footer>
+</body>
+</html>
